@@ -1,1 +1,61 @@
-
+import java.util.Scanner;
+public class Assignment2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+        System.out.println("HELLO AND WELCOME TO THE 3 QUESTION GAME SHOW. I will ask you 3 questions and we will see if you can get them right. There may be prizes at the end;)");
+        System.out.println("We'll start of easy. Question 1: Is a tomato a vegetable?");
+        String imput = sc.nextLine();
+        if ((imput.equals("Yes")) || (imput.equals("yes"))){
+            System.out.println("Nope, A tomato is a fruit. No points for you.");
+        }else if((imput.equals("No"))||(imput.equals("no"))){
+            System.out.println("That's right. A tomato is a fruit not a vegetable. 1 point for you ");
+            score = score +1;
+        }else {
+            System.out.println("it was a yes or no question ou should have put yes or no. no points :(");
+        }
+        System.out.println("Ok lets get a little harder. Question 2: What was the first pixar movie? pick a number. 1. A Bugs life, 2. Toy Story, or 3.Monsters Inc.");
+        int imput2= sc.nextInt();
+        if (imput2 == 1){
+            System.out.println("You are wrong, It was Toy Story, no points");
+        }else if ( imput2 == 2){
+            System.out.println("nice Job, Toy story is the first one. +1 point :)");
+            score = score +1;
+        }else if (imput2 == 3){
+            System.out.println("Wrong it was not Monsters Inc., it was Toy story, no points ");
+        }else{
+            System.out.println("You had to put 1, 2, or 3. No points :(");
+        }
+        System.out.println("Ok the final question it's the hardest one in the world!!! Question 3: What is 1 + 1. pick a number 1. 2, 2. 1, or 3. window.");
+        int imput3 = sc.nextInt();
+        System.out.println("Take your time i know its a hard one");
+        int imput4 = sc.nextInt();
+        System.out.println("Its ok to use scrap paper");
+        int imput5 = sc.nextInt();
+        System.out.println("You didn't forget to carry the one right... good, so your final answer is...");
+        int imput6 = sc.nextInt();
+        if (imput6 == 1){
+            System.out.println(":O YOU DID IT YOU GOT IT CORRECT. here is 1 very deserved point to you. I know it must have taken you hours to solve that.");
+            score = score+1;
+        }else if (imput6 == 2) {
+            System.out.println("Oof, I know it must have been confusing but you got it wrong. You chose 2. 1 not 1. 2 the answer is 2 so you should have chose 1 not 2. No points for you sorry");
+        }else if (imput6 == 3) {
+            System.out.println("I see that you know about the secret window and for your knowledge I shall grant you 2 points :)");
+            score = score + 2;
+        }else{
+            System.out.println("No you were supposed to put 1, 2, or 3 now you get no points.");
+        }
+        System.out.println("And that's the end of the game. Your score is "+ score);
+        if (score == 0){
+            System.out.println("You didn't get a single point? No prize for you >:(");
+        }else if ((score == 1)||(score==2)){
+            System.out.println("You did not get enough points for a prize sorry :(");
+        }else if (score == 3){
+            System.out.println("You got all 3 questions correct you get the prize of being smarter than everybody.");
+        }else{
+            System.out.println("You got the secret prize of actually being the best even better than the 3 point people. Congrats :)");
+        }
+    }
+}
+// I learned that I can use imput.equals for strings. 
+// I also learned that I need to do score= score +1 to add a point.
