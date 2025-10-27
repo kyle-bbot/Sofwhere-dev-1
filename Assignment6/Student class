@@ -1,0 +1,37 @@
+import java.util.Random;
+public class student {
+    String name;
+    String year;
+    double gpa;
+    int id;
+
+    public student(String n, String y, double g, int i){
+        name = n;
+        year = y;
+        gpa = g;
+        id = i;
+    }
+
+    void isHonor(){
+        if (gpa > 3.6){
+            System.out.println("Congrats"+this.name+" you are an honors roll");
+        }
+        else{
+            System.out.println("Sorry"+this.name+" you did not make the honor roll");
+        }
+    }
+
+    void isWinner(){
+        Random random = new Random();
+        int min = 100;
+        int max = 999;
+        int randomId = random.nextInt(max - min + 1) + min;
+        System.out.println("This is the winning id number:"+ randomId);
+        if (randomId == this.id){
+            System.out.print("Congrats id number "+this.id+" you have won the free lunch!!");
+        }
+        else{
+            System.out.println("Sorry "+this.id+" you are not the winner it was id number "+randomId+", better luck next time.");
+        }
+    }
+}
