@@ -1,0 +1,13 @@
+public class enemy {
+    int health;
+    int damage;
+
+    public enemy(int h, int d){
+        health = h;
+        damage = d;
+    }
+
+    void attack(){
+        System.out.println("the enemy attacks");
+    }
+}
