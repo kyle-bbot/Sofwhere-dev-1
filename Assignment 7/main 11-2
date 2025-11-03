@@ -1,0 +1,18 @@
+public class Assinment7 {
+    public static void main(String[] args) {
+        enemy e1 = new enemy(10, 5);
+        e1.attack();
+        //create a generic enemy and call its functions
+
+        wizard w1 = new wizard(12, 8, "fire");
+        wizard w2 = new wizard(8, 6, "ice");
+        w1.damageType();
+        w2.damageType();
+        //create a fire and an ice wizard and call all functions
+
+        goblin g1 = new goblin(4, 2);
+        g1.attack();
+        //create a goblin and call its functions
+
+    }
+}
